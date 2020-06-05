@@ -16,7 +16,7 @@ services:
     depends_on:
       - app
     ports:
-      - 8000:80
+      - 80:80
     volumes:
       - ./src:/var/www
       - ./logs:/var/log/nginx

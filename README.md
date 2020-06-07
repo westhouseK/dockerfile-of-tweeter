@@ -1,1 +1,2 @@
-# tweet application in docker
+# tweeter in docker
+dockerの設定ファイル

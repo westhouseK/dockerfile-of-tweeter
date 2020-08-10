@@ -5,10 +5,13 @@ services:
       context: ./docker/php
       args:
         - TZ=${TZ}
+    tty: true
+    stdin_open: true
     volumes:
       - ./src:/var/www
       - ./logs:/var/log/php
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      # - ./docker/php/log/xdebug:/var/log/xdebug
     working_dir: /var/www
     environment:
       - DB_CONNECTION=mysql
